@@ -1,0 +1,17 @@
+#armstrong number using recursion
+total = 0
+def armstrong(N,L):
+    global total
+    if N!=0:
+        rem = N%10
+        total = total+(rem)**L
+        N = N//10
+        armstrong(N,L)
+        return total
+n = int(input('Enter N: '))
+x = len(str(n))
+R = armstrong(n,x)
+if n==R:
+    print("Armstrong")
+else:
+    print("Not Armstrong") 
